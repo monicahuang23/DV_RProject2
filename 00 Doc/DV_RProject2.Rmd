@@ -1,0 +1,24 @@
+---
+title: "DV_RProject2"
+author: "Monica and Rachel"
+date: "September 28, 2015"
+output: html_document
+---
+
+For our project, we extracted data concerning general information of hospitals in the United States. 
+
+The code that we used to extract, transform, and load the data into an sql statement is as follows: 
+
+```{r}
+source("../01 Data/R_ETL.R", echo = TRUE)
+```
+
+We imported the CVS file into a table in SQL.  
+
+Then, we used the code below to display a subset of data for hospitals in Travis County, Texas. 
+```{r}
+source ("../01 Data/Titanic Analysis.R", echo = TRUE)
+```
+
+
+
