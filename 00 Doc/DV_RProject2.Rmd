@@ -10,7 +10,7 @@ For our project, we extracted data concerning general information of hospitals i
 The code that we used to extract, transform, and load the data into an sql statement is as follows: 
 
 ```{r}
-source("../01 Data/R_ETL.R", echo = TRUE)
+source("../01 Data/ETL.R")
 ```
 
 We imported the CVS file into a table in SQL.  
