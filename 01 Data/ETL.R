@@ -1,3 +1,6 @@
+require("jsonlite")
+require ("RCurl")
+
 setwd("~/DataVisualization/DV_RProject2/01 Data")
 
 file_path <- "Hospital_General_Information.csv"
@@ -7,7 +10,7 @@ df <- read.csv(file_path, stringsAsFactors = FALSE)
 # Replace "." (i.e., period) with "_" in the column names.
 names(df) <- gsub("\\.+", "_", names(df))
 
-str(df) # Uncomment this and  run just the lines to here to get column types to use for getting the list of measures.
+#str(df) # Uncomment this and  run just the lines to here to get column types to use for getting the list of measures.
 
 measures <- c("Provider_ID", "Zip_Code", "Phone_Number")
 #measures <- NA # Do this if there are no measures.
@@ -33,7 +36,6 @@ dimensions <- setdiff(names(df), measures)
 library(lubridate)
 
 # Get rid of all characters in measures except for numbers, the - sign, and period.dimensions
-
 
 write.csv(df, paste(gsub(".csv", "", file_path), ".reformatted.csv", sep=""), row.names=FALSE, na = "")
 
