@@ -4,21 +4,27 @@ author: "Monica and Rachel"
 date: "September 28, 2015"
 output: html_document
 ---
-
+##**Part 1**
 For our project, we extracted data concerning general information of hospitals in the United States. 
-
 The code that we used to extract, transform, and load the data into an sql statement is as follows: 
-
 ```{r}
-source("../01 Data/R_ETL.R", echo = TRUE)
+source("../01 Data/ETL.R")
 ```
-
+##**Part 2**
 We imported the CVS file into a table in SQL.  
-
 Then, we used the code below to display a subset of data for hospitals in Travis County, Texas. 
 ```{r}
 source ("../01 Data/Titanic Analysis.R", echo = TRUE)
 ```
-
-
-
+##**Part 3**
+Lastly, we used data wrangling to create three interesting data sets that showed interesting trends. 
+####**Data Set 1**
+For this data set.. blah blah blah
+####**Data Set 2**
+  
+####**Data Set 3**
+For this data set, we focused on states that had less than 20 emergencies. We then broke those states up even more and compared states that had less than 10 emergencies with states that had more than 10 emergencies in consideration with the type of hospital ownership.
+```{r}
+source("../02 Data Wrangling/Task 3.R", echo = TRUE)
+```
+We discovered that the states that had less than 5 emergencies were the American Samoa, the District of Columbia, Delaware, Guam, the Northern Mariana Islands, and the Virgin Islands. We noticed that all of these states are smaller and more obscure than the rest of the United States, and there may be less emergencies for many reasons, including lack of resources or reporting of emergencies. We also noticed that government owned hospitals tended to have even less emergencies than voluntary or proprietary hospitals.
