@@ -17,7 +17,7 @@ require (RCurl)
 For our project, we extracted data concerning general information of hospitals in the United States. 
 The code that we used to extract, transform, and load the data into an sql statement is as follows: 
 ```{r eval=FALSE}
-source("../01 Data/ETL.R")
+source("../01 Data/ETL.R",echo = TRUE)
 ```
 ##**Part 2**
 We imported the CVS file into a table in SQL.  

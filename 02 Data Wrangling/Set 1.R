@@ -3,7 +3,7 @@ require(dplyr)
 require(ggplot2)
 require (jsonlite)
 require (RCurl)
-x <- df %>% group_by(STATE, HOSPITAL_TYPE) %>% summarise(n = n())
+x <- df %>% dplyr::group_by(STATE, HOSPITAL_TYPE) %>% summarise(n = n())
 
 plot1 <- ggplot() + 
   coord_cartesian() + 
