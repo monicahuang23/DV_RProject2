@@ -1,3 +1,8 @@
+require(tidyr)
+require(dplyr)
+require(ggplot2)
+require (jsonlite)
+require (RCurl)
 x <- df %>% group_by(STATE, HOSPITAL_TYPE) %>% summarize(n = n())
 
 plot1 <- ggplot() + 
