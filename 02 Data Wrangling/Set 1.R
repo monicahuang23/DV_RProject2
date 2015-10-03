@@ -3,10 +3,14 @@ require(dplyr)
 require(ggplot2)
 require (jsonlite)
 require (RCurl)
+<<<<<<< HEAD
 
 df <- data.frame(fromJSON(getURL(URLencode('129.152.144.84:5001/rest/native/?query="select * from hospital_general_information"'),httpheader=c(DB='jdbc:oracle:thin:@129.152.144.84:1521/PDBF15DV.usuniversi01134.oraclecloud.internal', USER='cs329e_mh42375', PASS='orcl_mh42375', MODE='native_mode', MODEL='model', returnDimensions = 'False', returnFor = 'JSON'), verbose = TRUE), ))
 
 x <- df %>% group_by(STATE, HOSPITAL_TYPE) %>% summarise(n = n())
+=======
+x <- df %>% dplyr::group_by(STATE, HOSPITAL_TYPE) %>% summarise(n = n())
+>>>>>>> 345bb5c618f1978ee7bdbe4c68edd995f97bab16
 
 plot1 <- ggplot() + 
   coord_cartesian() + 
