@@ -1,4 +1,4 @@
-x <- df %>% filter(HOSPITAL_TYPE == "Childrens") %>% group_by(STATE, HOSPITAL_TYPE, HOSPITAL_OWNERSHIP) %>% summarize(n = n())
+x <- df %>% filter(HOSPITAL_TYPE == "Childrens") %>% group_by(STATE, HOSPITAL_TYPE, HOSPITAL_OWNERSHIP) %>% summarise(n = n())
 
 plot2 <- ggplot() + 
   coord_cartesian() + 
